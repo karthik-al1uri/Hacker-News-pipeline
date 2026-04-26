@@ -117,13 +117,6 @@ The Streamlit dashboard provides three key visualizations:
 2. **Sentiment Over Time** — Line chart tracking average VADER sentiment score trends
 3. **Peak Activity Hours** — Bar chart showing when stories are most frequently posted
 
-## Roadmap
-
-- [ ] Add keyword extraction with spaCy
-- [ ] Alerting when a story score spikes >500
-- [ ] Deploy to Railway or Render
-- [ ] Unit test coverage >80%
-
 ## License
 
 MIT
