@@ -1,0 +1,10 @@
+requests
+sqlalchemy
+psycopg2-binary
+apscheduler
+streamlit
+vaderSentiment
+pandas
+plotly
+python-dotenv
+notebook

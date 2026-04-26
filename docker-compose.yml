@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: hn_trends
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    restart: on-failure
+    depends_on:
+      - db
+    environment:
+      - DB_URL=postgresql://user:password@db:5432/hn_trends
+      - PYTHONPATH=/app
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: python pipeline/scheduler.py
+
+volumes:
+  postgres_data:
