@@ -374,8 +374,8 @@ def render_top_stories_table(df: pd.DataFrame, search: str = ""):
             cols = st.columns([6, 1, 1, 1])
             
             with cols[0]:
-                st.markdown(f"**{row['title']}**  
-<small style='color: #666;'>by {row['author']}</small>", unsafe_allow_html=True)
+                title_html = f"**{row['title']}**<br><small style='color: #666;'>by {row['author']}</small>"
+                st.markdown(title_html, unsafe_allow_html=True)
             
             with cols[1]:
                 st.markdown(f"⭐ **{row['score']}**")
