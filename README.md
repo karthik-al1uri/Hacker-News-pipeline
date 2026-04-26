@@ -111,11 +111,18 @@ hacker-news-trend-pipeline/
 
 ## Dashboard
 
-The Streamlit dashboard provides three key visualizations:
+The Streamlit dashboard provides an interactive, minimalistic interface with three key visualizations:
 
-1. **Top 10 Trending Keywords** — Bar chart showing most frequent words in story titles
-2. **Sentiment Over Time** — Line chart tracking average VADER sentiment score trends
-3. **Peak Activity Hours** — Bar chart showing when stories are most frequently posted
+1. **Trending Topics Treemap** — Interactive keyword visualization with hover details
+2. **Community Mood Gauge** — Real-time sentiment score with color-coded zones
+3. **Activity Heatmap** — Hour × Day pattern analysis
+
+![Dashboard Preview](assets/image.png)
+
+### Features
+- 🔍 **Search & Filter** — Search story titles, filter by score, sort by multiple criteria
+- 📊 **Interactive Charts** — Click, zoom, and explore all visualizations
+- ⚡ **Real-time Updates** — Data refreshes every 15 minutes via automated pipeline
 
 ## License
 
